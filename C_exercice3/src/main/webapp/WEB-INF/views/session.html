@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="meta-tags">
+
+</head>
+<body>
+
+<div style="display:block; border: solid thin darkblue;" th:fragment="session">
+    Le login stocké en session est :
+    <div th:if="${not empty courant}" th:text="${courant}"></div>
+    <div th:if="${empty courant}">Pas de login stocké en session</div>
+</div>
+
+</body>
+</html>
