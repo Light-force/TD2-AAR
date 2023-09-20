@@ -50,7 +50,7 @@ public class Exercice3Controller {
     }
 
     @RequestMapping("setMood")
-    public String setMood(@ModelAttribute("mood") String mood, Model model) {
+    public String setMood(String mood, Model model) {
         model.addAttribute("mood", mood);
         return "welcome";
     }
