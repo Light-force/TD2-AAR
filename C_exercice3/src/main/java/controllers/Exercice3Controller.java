@@ -10,7 +10,7 @@ import services.Facade;
 import java.util.List;
 
 @Controller
-@SessionAttributes({"courant", "mood"})
+@SessionAttributes({"courant", "username", "mood"})
 @RequestMapping("/")
 public class Exercice3Controller {
     private Facade facade = Facade.getInstance();
