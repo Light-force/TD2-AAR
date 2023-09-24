@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Humeur</title>
+</head>
+<body>
+
+<h1>Quelle est votre humeur aujourd'hui?</h1>
+
+<form method="post" th:action="@{/setMood}">
+  <select name="mood">
+    <option th:each="mood : ${moods}" th:value="${mood}" th:text="${mood}"></option>
+  </select>
+
+  <button type="submit">Soumettre</button>
+</form>
+
+</body>
+</html>

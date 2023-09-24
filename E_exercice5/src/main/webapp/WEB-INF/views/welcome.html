@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Bienvenue</title>
+</head>
+<body>
+<p>Bienvenue, <span th:text="${username}"></span>.</p>
+<p>Aujourd'hui, vous vous sentez : <span th:text="${mood}"></span>.</p>
+
+<form th:action="@{/logout}">
+  <button type="submit">se déconnecter</button>
+</form>
+
+<form th:action="@{/simplecheck}">
+  <button type="submit">Vérifier le login en session (en trace de serveur)</button>
+</form>
+
+<p>Nombre d'invocations du contrôleur : <span th:text="${compteur}"></span>.</p>
+
+<div th:include="session :: session"></div>
+
+</body>
+</html>
