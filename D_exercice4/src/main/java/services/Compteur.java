@@ -6,18 +6,18 @@ import javax.annotation.PostConstruct;
 
 @Service
 public class Compteur {
-    private int nbInstances;
+    private int cpt;
 
     @PostConstruct
-    public void resetNbInstances() {
-        nbInstances = 0;
+    public void initCpt() {
+        this.cpt = 0;
     }
 
-    public void countInstances() {
-        ++nbInstances;
+    public int getCpt() {
+        return cpt;
     }
 
-    public int getNbInstances() {
-        return nbInstances;
+    public void incrementingCpt() {
+        ++this.cpt;
     }
 }

@@ -15,6 +15,8 @@
   <button type="submit">Vérifier le login en session (en trace de serveur)</button>
 </form>
 
+<p>Nombre d'invocations du contrôleur : <span th:text="${compteur}"></span>.</p>
+
 <div th:include="session :: session"></div>
 
 </body>
